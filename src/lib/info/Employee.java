@@ -1,4 +1,4 @@
-package lib;
+package lib.info;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -6,12 +6,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Calendar;
 import java.util.Date;
+import lib.TaxFunction;
 
 public class Employee {
 
 	private String employeeId;
-	private String firstName;
-	private String lastName;
 	private String idNumber;
 	private String address;
 	
@@ -37,8 +36,6 @@ public class Employee {
 	
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, GenderName gender) {
 		this.employeeId = employeeId;
-		this.firstName = firstName;
-		this.lastName = lastName;
 		this.idNumber = idNumber;
 		this.address = address;
 		this.joinedDate = joinedDate;
