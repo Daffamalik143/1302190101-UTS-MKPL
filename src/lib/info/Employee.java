@@ -12,18 +12,13 @@ public class Employee {
 
 	private String employeeId;
 	private String idNumber;
-	private String address;
+	private Person employeeDetails;
 	
 	private Date joinedDate;
 	private int monthWorkingInYear;
 	
-	private boolean isForeigner;
-	private enum GenderName{
-		Pria,
-		Wanita
-	}
-	private GenderName gender;
-	
+
+
 	private int monthlySalary;
 	private int otherMonthlyIncome;
 	private int annualDeductible;
@@ -36,11 +31,13 @@ public class Employee {
 	
 	public Employee(String employeeId, String firstName, String lastName, String idNumber, String address, int yearJoined, int monthJoined, int dayJoined, boolean isForeigner, GenderName gender) {
 		this.employeeId = employeeId;
-		this.idNumber = idNumber;
-		this.address = address;
+		employeeDetails = new Person();
+		employeeDetails.setFirstName(firstName);
+		employeeDetails.setFirstName(lastName);
+		employeeDetails.setGender(gender);
+		employeeDetails.setAddress(address);
+		employeeDetails.setForeigner(isForeigner);
 		this.joinedDate = joinedDate;
-		this.isForeigner = isForeigner;
-		this.gender = gender;
 		
 		childNames = new LinkedList<String>();
 		childIdNumbers = new LinkedList<String>();
