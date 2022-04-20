@@ -7,7 +7,6 @@ public class Person extends Name{
 	}
 	private GenderName gender;
     private Name personName;
-	private boolean isForeigner;
     private String address;
 
     public void setGender(GenderName gender) {
@@ -22,12 +21,6 @@ public class Person extends Name{
 
     public Name getName() {
         return this.personName;
-    }
-    public void setForeigner(boolean isForeigner){
-        this.isForeigner = isForeigner;
-    }
-    public boolean getForeigner(){
-        return this.isForeigner;
     }
     public void setAddress(String address){
         this.address = address;
